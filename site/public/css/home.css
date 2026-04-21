@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.font-geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 0px 30px;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.logo {
+    display: flex;
+    font: 'Batang', serif;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    flex: 1;
+
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.links-comum {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 2;
+    gap: 25px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.links-cadastro {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    gap: 30px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+
+.links-comum a {
+    color: white;
+    text-decoration: none;
+}
+
+.links-cadastro a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: #A5AF79;
+    border-radius: 12px;
+    padding: 5px 18px;
+
+}
+
+
+.banner {
+    background-image: url('../img/banner.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+}
+
+.banner p {
+    position: absolute;
+    font-size: 30px;
+    width: 550px;
+    color: rgb(255, 255, 255, 0.7);
+    bottom: 40px;
+    right: 30px;
+
+}
+
+.titulo-shadowhunters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    font-size: 25px;
+
+}
+
+.titulo-shadowhunters p {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: black;
+    padding: 5px;
+    margin-top: 30px;
+
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.introducao_titulo {
+    display: flex;
+    font-size: 25px;
+    color: #B2B231;
+    border: 3px solid;
+    border-color: #B3B330;
+    border-radius: 12px;
+    width: fit-content;
+    margin-top: 80px;
+    margin-left: 30px;
+    padding: 3px 20px;
+}
+
+.introducao_cima {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    width: 100%;
+    padding: 30px 30px;
+}
+
+.introducao_cima img {
+
+    width: 300px;
+    height: 450px;
+
+}
+
+.introducao_cima_texto {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    padding: 0px 20px;
+    color: #3c3c0d;
+}
+
+.introducao_cima_texto p {
+    width: 90%;
+    font-size: 23px;
+    padding-top: 20px;
+}
+
+
+.introducao_baixo {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    width: 100%;
+    background-color: #B9B7B7;
+    padding: 20px 30px;
+    color: #3c3c0d;
+}
+
+.introducao_baixo p {
+    width: 90%;
+    font-size: 23px;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+
+.biblioteca {
+    padding: 10px 30px;
+}
+
+.cor_fundo_vermelha {
+    background-color: #B12727;
+}
+
+.cor_fundo_azul {
+    background-color: #576E9F;
+}
+
+.cor_fundo_verde {
+    background-color: #518860;
+}
+
+.cor_fundo_dourado {
+    background-color: #9A750E;
+}
+
+.cards_geral {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+
+}
+
+.linha_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+  
+    
+    
+}
+.card {
+    width: 240px;
+    height: 370px;
+    perspective: 1000px;
+  
+}
+
+.card_flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+   
+    
+}
+
+.card:hover .card_flip {
+    transform: rotateY(180deg);
+}
+
+.card_frente,
+.card_atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    
+}
+
+.card_frente {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(236, 232, 232, 0.9);
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.4);
+      padding: 0px 8px;
+
+}
+
+.card_atras {
+    transform: rotateY(180deg); 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(236, 232, 232, 0.9);
+     box-shadow: 4px 4px 6px rgba(0,0,0, 0.4);
+           padding: 10px 10px;
+
+}
+
+.img_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.card img {
+    width: 85%;
+    height: 90%;
+    border-radius: 8px;
+}
+
+.tipo_card {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 19px;
+    border-radius: 8px;
+    color: rgb(220, 218, 218);
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+
+.titulo_livro {
+     margin-top: 6px;
+    color: rgb(0, 0, 0, 0.9);
+    font-weight: bold;
+
+}
+
+.desc_livro {
+    width: 100%;
+    font-size: 13px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0, 0.7);
+    padding: 5px 0px;
+   
+}
+
+.lista_livros{
+    font-size: 13px;
+}
+
+.lista_livros li::before {
+     content: "-";
+    margin-right: 5px;
+}
+.card_atras ul{
+    padding: 5px 0px;
+  color: rgb(0, 0, 0, 0.7);
+   list-style: none;
+}
+
+.desc_livro_tras{
+    width: 100%;
+    font-size: 13px;
+   
+    color: rgb(0, 0, 0, 0.7);
+    padding: 5px 0px;
+}
+
+
+.chamativo{
+    width: 100%;
+    height: 200px;
+    background-color: #1B1C3F;
+}
