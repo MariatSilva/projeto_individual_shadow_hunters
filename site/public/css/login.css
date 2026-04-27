@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.font-geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_geral{
+    background-image: url('/site/public/img/fundo_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}

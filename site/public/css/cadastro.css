@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.font-geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_geral{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url('/site/public/img/fundo_cadastro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left;
+    height: 100vh;
+    width: 100vw;
+   padding-right: 5vw;
+   padding-bottom: 4vh;
+}
+
+.formulario{ 
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height:fit-content;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(7px);
+    border-radius: 4vh;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+   
+    padding:5vh 4vw;
+}
+
+.titulo_formulario{
+   
+    font-size: 4.5vh;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+   text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
+}
+
+.formulario img{
+    width: 3vw;
+     padding: 0vh 0vh 3vh 0vh ;
+}
+
+.input_geral{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 2.7vh;
+    gap: 0.5vh;
+}
+
+
+ input{
+    width: 40vw;
+    height: 6vh;
+    border-radius: 2vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+     transition: all 0.3s ease;
+}
+
+input:focus{
+    background-color: rgba(77, 77, 77, 0.1);
+}
+
+
+
+.ipt_nome, .ipt_email, .ipt_senha {
+   margin-bottom: 4vh;
+}

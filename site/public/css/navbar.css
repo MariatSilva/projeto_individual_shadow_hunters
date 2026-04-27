@@ -1,0 +1,110 @@
+
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.font-geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 0px 30px;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.logo {
+    display: flex;
+    font: 'Batang', serif;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: fit-content;
+
+
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.links-comum {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    gap: 5vw;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.barra{
+    color: white;
+}
+
+.links-cadastro {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    
+    gap: 30px;
+    font-size: 17px;
+    font-weight: lighter;
+  
+}
+
+
+.links-comum a {
+    color: white;
+    text-decoration: none;
+}
+
+.links-comum a:hover {
+    color: rgb(220, 236, 131);
+    text-decoration: none;
+    text-shadow: 2px 2px rgb(255, 255, 255, 0.2);
+     transition: all 0.3s ease;
+}
+
+.links-cadastro a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: #A5AF79;
+    border-radius: 12px;
+    padding: 5px 18px;
+    font-weight: bold;
+}
+
+.links-cadastro a{
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.links-cadastro a:hover{
+    background-color: #A5AF79;
+    color: black;
+}
