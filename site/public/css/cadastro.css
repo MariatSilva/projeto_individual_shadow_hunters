@@ -30,7 +30,7 @@ body {
     height: 100vh;
     width: 100vw;
    padding-right: 5vw;
-   padding-bottom: 4vh;
+   padding-bottom: 3vh;
 }
 
 .formulario{ 
@@ -46,7 +46,7 @@ body {
     border-radius: 4vh;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
    
-    padding:5vh 4vw;
+    padding:4vh 4vw;
 }
 
 .titulo_formulario{
@@ -59,7 +59,7 @@ body {
 
 .formulario img{
     width: 3vw;
-     padding: 0vh 0vh 3vh 0vh ;
+     padding: 1vh 0vh 1vh 0vh ;
 }
 
 .input_geral{
@@ -68,17 +68,20 @@ body {
     color: white;
     font-weight: bold;
     font-size: 2.7vh;
-    gap: 0.5vh;
+    gap: 0.4vh;
 }
 
 
  input{
     width: 40vw;
-    height: 6vh;
+    height: 5vh;
     border-radius: 2vh;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(7px);
-     transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 0.2vh solid rgb(0, 0, 0, 0.3);
+    
+   
 }
 
 input:focus{
@@ -87,6 +90,27 @@ input:focus{
 
 
 
-.ipt_nome, .ipt_email, .ipt_senha {
+#ipt_nome, #ipt_email, #ipt_senha, #ipt_confirmar_senha{
    margin-bottom: 4vh;
+}
+
+.formulario button{
+    background-color: rgba(233, 227, 213, 0.5);
+    width: 8vw;
+    height: 4vh;
+    border-radius: 12px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 1vh;
+}
+
+.formulario a{
+    color: rgb(145, 139, 55);
+    font-weight: bold;
+}
+
+.formulario a:hover{
+     color: rgb(218, 214, 140);
+    transition: all 0.3s ease;
 }

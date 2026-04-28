@@ -20,10 +20,100 @@ body {
 }
 
 .container_geral{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-image: url('/site/public/img/fundo_login.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position:left;
     height: 100vh;
     width: 100vw;
+   padding-right: 5vw;
+  
+}
+
+.formulario{ 
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height:fit-content;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(7px);
+    border-radius: 4vh;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+   
+    padding:4vh 4vw;
+}
+
+.titulo_formulario{
+   
+    font-size: 4.5vh;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+   text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
+}
+
+.formulario img{
+    width: 3vw;
+     padding: 1vh 0vh 1vh 0vh;
+
+
+}
+
+.input_geral{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 2.7vh;
+    gap: 0.4vh;
+}
+
+
+ input{
+    width: 40vw;
+    height: 5vh;
+    border-radius: 2vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+    transition: all 0.3s ease;
+    border: 0.2vh solid rgb(0, 0, 0, 0.3);
+    
+   
+}
+
+input:focus{
+    background-color: rgba(77, 77, 77, 0.1);
+}
+
+
+
+#ipt_nome, #ipt_email, #ipt_senha, #ipt_confirmar_senha{
+   margin-bottom: 4vh;
+}
+
+
+.formulario button{
+    background-color: rgba(174, 202, 199, 0.5);
+    width: 8vw;
+    height: 4vh;
+    border-radius: 12px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 1vh;
+}
+
+.formulario a{
+    color: rgb(18, 29, 76);
+    font-weight: bold;
+}
+
+.formulario a:hover{
+     color: rgb(3, 12, 40);
+    transition: all 0.3s ease;
 }
