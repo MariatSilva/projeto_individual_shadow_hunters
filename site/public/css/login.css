@@ -98,7 +98,7 @@ input:focus{
 
 
 .formulario button{
-    background-color: rgba(174, 202, 199, 0.5);
+    background-color: rgba(202, 189, 174, 0.8);
     width: 8vw;
     height: 4vh;
     border-radius: 12px;
@@ -109,11 +109,11 @@ input:focus{
 }
 
 .formulario a{
-    color: rgb(18, 29, 76);
+    color:rgb(27, 27, 29);
     font-weight: bold;
 }
 
 .formulario a:hover{
-     color: rgb(3, 12, 40);
+     color: #3e3f1b;
     transition: all 0.3s ease;
 }
