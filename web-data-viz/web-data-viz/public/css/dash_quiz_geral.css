@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #08061B;
+
+}
+
+
+.container_geral {
+    display: flex;
+    flex-direction: row;
+min-height: 100vh;
+}
+
+.grafico_geral{
+    display: flex;
+    flex-direction: column;
+      flex: 1;
+    padding-top: 30px;
+    margin-left: 250px;
+}
+
+.grafico_geral h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #DEDEDE;
+}
+
+.indicadores_gerais{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    
+}
+
+.indicador_unico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+    background-color: #070517;
+    box-shadow:4px 4px 6px rgb(220, 236, 131, 0.3);
+    border-radius: 3px;
+   
+}
+
+.indicador_unico hr{
+    width: 100%;
+    color: rgb(222, 222, 222, 0.8);
+    font-size: 2px;
+}
+
+.titulo_indicador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   padding: 5px 5px;
+    height: 50%;
+    width: 100%;
+}
+
+.valor_indicador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+        color: white;
+ padding: 5px 5px;
+    height: 50%;
+    width: 100%;
+}
+
+.grafico_unico_linha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  
+}
+
+.titulo_grafico{
+    padding-top: 20px;
+   padding-bottom: 20px;
+    color: #DEDEDE;
+}
+.grafico_container{
+    width: 55%;
+    height: 280px;
+
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="/assets/img/logo.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonShadow | Usuários</title>
+    <link rel="stylesheet" href="/css/dash_quiz_geral.css">
+    <link rel="stylesheet" href="/css/header_lateral.css">
+    <script src="../js/sessao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body onload="validarSessao(), exibirAquarios(),  atualizacaoPeriodica()">
+    <div class="container_geral">
+
+
+
+
+
+        <div class="header-left">
+            <div class="logo">
+                <img class="img_logo" src="/assets/img/logo.png" alt="">
+                <p class="titulo_logo">MoonShadow</p>
+            </div>
+
+            <div class="btn_acesso_geral font_geral">
+                <div class="btn_acesso_atual">
+                    <a href="dash_quiz.html">Quiz-Geral</a>
+                </div>
+                <div class="btn_acesso">
+                    <a href="dash_quiz.html">Quiz-Personalidade</a>
+                </div>
+
+            </div>
+
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="grafico_geral font_geral">
+            <h1>Análise de respostas: Quiz Conhecimentos Gerais</h1>
+
+            <div class="indicadores_gerais">
+
+                <div class="indicador_unico">
+                    <div class="titulo_indicador">Quantidade de usuarios que fizeram o quiz</div>
+                    <hr>
+                    <div class="valor_indicador">207</div>
+                </div>
+
+                <div class="indicador_unico">
+                    <div class="titulo_indicador">Média dos pontos de todas as resposta </div>
+                    <hr>
+                    <div class="valor_indicador">7.7</div>
+                </div>
+
+                <div class="indicador_unico">
+                    <div class="titulo_indicador">Respostas abaixo de 5 pontos</div>
+                    <hr>
+                    <div class="valor_indicador">35</div>
+                </div>
+            </div>
+
+            <div class="grafico_unico_linha ">
+                <h3 class="titulo_grafico">Quantidade de respostas do quiz por pontos(0 a 10)</h3>
+                <div class="grafico_container">
+                <canvas id="grafico_qtd_resp_quiz"></canvas>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+
+<script>
+    const ctx = document.getElementById('grafico_qtd_resp_quiz');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['0 pts', '1 pts', '2 pts', '3 pts', '4 pts', '5 pts', '6 pts', '7 pts', '8 pts', '9 pts', '10 pts'],
+            datasets: [{
+                label: 'respostas',
+                data: [12, 19, 3, 5, 2, 3, 20, 16, 15, 17, 1],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</html>
