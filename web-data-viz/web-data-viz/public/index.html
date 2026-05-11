@@ -7,7 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/home.css">
-     <link rel="icon" href="./assets/img/logo.png" />
+    <link rel="icon" href="./assets/img/logo.png" />
 </head>
 
 <body>
@@ -22,6 +22,7 @@
             });
     </script>
 
+    <div id="container_total">
     <div class="banner">
         <p>Onde quer que morras morrerei eu, e ali serei sepultado. <br>
             Faça-me assim o Anjo, e outro tanto, se outra coisa que não a morte me separar de ti.
@@ -72,10 +73,13 @@
         </div>
     </div>
 
-    <p class="introducao_titulo font-geral">Biblioteca Shadowhunters</p>
+
 
     <div class="biblioteca font-geral">
-        <h2>Conheça as obras do universo de Shadowhunter</h2>
+        <div class="div_introducao_titulo">
+            <p class="introducao_titulo font-geral">Biblioteca Shadowhunters</p>
+        </div>
+        <h1>Conheça as obras do universo de Shadowhunters</h1>
 
         <div class="cards_geral">
 
@@ -509,6 +513,7 @@
             <p id="frase_chamativo">Crie uma conta e acesse conteúdos exclusivos, curiosidades e guias completos do
                 universo.</p>
             <p id="btn_chamativo">CADASTRO</p>
+
         </div>
         <div class="imagens_chamativo">
             <img id="logo_chamativo_frente" src="/assets/img/logo.png" alt="">
@@ -518,15 +523,92 @@
 
     <div class="ordem_de_leitura">
         <p class="introducao_titulo font-geral">Ordem de Leitura</p>
-        <div class="texto_ordem_leitura">
+        <div class="texto_ordem_leitura font-geral">
             <p>Com tantos livros no universo Shadowhunter, pode ser difícil saber por onde começar.
+                <br>
                 Por isso, você pode escolher entre duas formas de leitura: a ordem cronológica, baseada na linha do
                 tempo da
-                história, ou a ordem de publicação, que segue o lançamento original dos livros.</p>
+                história, ou a ordem de publicação, que segue o lançamento original dos livros.
+            </p>
         </div>
+
+        <div class="ordem_listas font-geral">
+            <div class="ordem_publicacao">
+                <p class="titulo_ordem">Ordem de Publicação</p>
+                <ul class="lista">
+                    <li>Cidade dos Ossos (2007)</li>
+                    <li>Cidade das Cinzas (2008)</li>
+                    <li>Cidade de Vidro (2009)</li>
+                    <li>Anjo Mecânico (2010)</li>
+                    <li>Cidade dos Anjos Caídos (2011)</li>
+                    <li>Príncipe Mecânico (2011)</li>
+                    <li>Cidade das Almas Perdidas (2012)</li>
+                    <li>Princesa Mecânica (2013)</li>
+                    <li>Códex dos Caçadores de Sombras (2013)</li>
+                    <li>As Crônicas de Bane (2014)</li>
+                    <li>Cidade do Fogo Celestial (2014)</li>
+                    <li>Dama da Meia-Noite (2016)</li>
+                    <li>Uma História de Notáveis Caçadores de Sombras e Seres do Submundo (2016)</li>
+                    <li>Senhor das Sombras (2017)</li>
+                    <li>Contos da Academia dos Caçadores de Sombras (2017)</li>
+                    <li>Rainha do Ar e da Escuridão (2018)</li>
+                    <li>Fantasmas do Mercado das Sombras (2019)</li>
+                    <li>Os Pergaminhos Vermelhos da Magia (2019)</li>
+                    <li>Corrente de Ouro (2020)</li>
+                    <li>O Livro Branco Perdido (2020)</li>
+                    <li>Corrente de Ferro (2021)</li>
+                    <li>Corrente de Espinhos (2023)</li>
+                    <li>O Volume Preto dos Mortos (não publicado)</li>
+                    <li>Os Poderes Perversos (não publicado)</li>
+                </ul>
+            </div>
+            
+            <hr>
+            <div class="ordem_cronologica">
+                <p class="titulo_ordem">Ordem Cronológica</p>
+                <ul class="lista">
+                    <li>Códex dos Caçadores de Sombras</li>
+                    <li>Anjo Mecânico</li>
+                    <li>Príncipe Mecânico</li>
+                    <li>Princesa Mecânica</li>
+                    <li>Corrente de Ouro</li>
+                    <li>Corrente de Ferro</li>
+                    <li>Corrente de Espinhos</li>
+                    <li>Cidade dos Ossos</li>
+                    <li>Cidade das Cinzas</li>
+                    <li>Cidade de Vidro</li>
+                    <li>Cidade dos Anjos Caídos</li>
+                    <li>Os Pergaminhos Vermelhos da Magia</li>
+                    <li>As Crônicas de Bane</li>
+                    <li>Cidade das Almas Perdidas</li>
+                    <li>Cidade do Fogo Celestial</li>
+                    <li>Contos da Academia dos Caçadores de Sombras</li>
+                    <li>Uma História de Notáveis Caçadores de Sombras e Seres do Submundo</li>
+                    <li>Dama da Meia-Noite</li>
+                    <li>Senhor das Sombras</li>
+                    <li>Fantasmas do Mercado das Sombras</li>
+                    <li>Rainha do Ar e da Escuridão</li>
+                    <li>O Livro Branco Perdido</li>
+                    <li>O Volume Preto dos Mortos (não publicado)</li>
+                    <li>Os Poderes Perversos (não publicado)</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
-    <br><br><br><br><br>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/includes/footer.html")
+            .then(resposta => resposta.text())
+            .then(dados => {
+                document.getElementById("footer").innerHTML = dados
+            });
+    </script>
 </body>
 
 </html>

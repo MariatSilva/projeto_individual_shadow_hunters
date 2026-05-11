@@ -22,7 +22,7 @@ body {
 .container_geral{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     background-image: url('/assets/img/fundo_cadastro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,7 +30,8 @@ body {
     height: 100vh;
     width: 100vw;
    padding-right: 5vw;
-   padding-bottom: 3vh;
+   
+   
 }
 
 .formulario{ 
@@ -80,6 +81,9 @@ body {
     backdrop-filter: blur(7px);
     transition: all 0.3s ease;
     border: 0.2vh solid rgb(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    padding-left: 10px;
     
    
 }

@@ -64,9 +64,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
+    width: 150px;
     height: 40px;
-background-color: #000;
+
     color: #4475DE;
     border: 2px solid #4475DE;
     border-radius: 3px;
@@ -78,7 +78,7 @@ background-color: #000;
      display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
+    width: 150px;
     height: 40px;
     background-color: #4475DE;
     color: #000;

@@ -53,7 +53,7 @@
                 <div class="indicador_unico">
                     <div class="titulo_indicador">Quantidade de usuarios que fizeram o quiz</div>
                     <hr>
-                    <div class="valor_indicador">207</div>
+                    <div class="valor_indicador">213</div>
                 </div>
 
                 <div class="indicador_unico">
@@ -63,17 +63,22 @@
                 </div>
 
                 <div class="indicador_unico">
-                    <div class="titulo_indicador">Respostas abaixo de 5 pontos</div>
+                    <div class="titulo_indicador">Respostas ABAIXO de 5 pontos</div>
                     <hr>
                     <div class="valor_indicador">35</div>
+                </div>
+                <div class="indicador_unico">
+                    <div class="titulo_indicador">Respostas ACIMA de 5 pontos</div>
+                    <hr>
+                    <div class="valor_indicador">178</div>
                 </div>
             </div>
 
             <div class="grafico_unico_linha ">
                 <h3 class="titulo_grafico">Quantidade de respostas do quiz por pontos(0 a 10)</h3>
                 <div class="grafico_container">
-                <canvas id="grafico_qtd_resp_quiz"></canvas>
-            </div>
+                    <canvas id="grafico_qtd_resp_quiz"></canvas>
+                </div>
             </div>
 
         </div>
@@ -98,14 +103,26 @@
             datasets: [{
                 label: 'respostas',
                 data: [12, 19, 3, 5, 2, 3, 20, 16, 15, 17, 1],
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: '#E5CE4E',
+
             }]
         },
         options: {
-            
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#E5CE4E' 
+                    }
+                }
+            },
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    ticks: { color: 'white' }
+                },
+                x:{
+                    ticks: { color: 'white' }
                 }
             }
         }

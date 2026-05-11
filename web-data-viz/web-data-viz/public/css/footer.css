@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.font-geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-items: center;
+     background-image: url('/assets/img/fundo_footer.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+
+.logo_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_footer p{
+    color: #c0b459;
+    font-size: 24px;
+    font: 'Batang', serif;
+}
+
+.logo_footer img{
+    width: 100px;
+    height: 110px;
+}
+
+.footer hr{
+    height: 80%;
+    border: 1px solid #7c7019;
+    margin: 0px 30px;
+}
+
+.texto_geral{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.titulo_footer{
+    font-size: 22px;
+    color: #c0b459;
+}
