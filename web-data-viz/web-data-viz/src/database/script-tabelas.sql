@@ -6,57 +6,46 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE shadow_hunters;
+USE shadow_hunters;
 
-USE aquatech;
-
-CREATE TABLE empresa (
+CREATE TABLE usuario(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14),
-	codigo_ativacao VARCHAR(50)
+    nome VARCHAR (150),
+    email VARCHAR (120) UNIQUE NOT NULL,
+    senha VARCHAR (200) NOT NULL,
+    dt_cadastro DATE DEFAULT(CURRENT_DATE)
 );
 
-CREATE TABLE usuario (
+
+CREATE TABLE quiz_geral(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+    nome_quiz VARCHAR (200)
 );
 
-CREATE TABLE aviso (
+CREATE TABLE usuario_quiz_geral(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
 	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+    fk_quiz_geral INT,
+    
+    CONSTRAINT ct_fk_usario
+    FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
+    
+     CONSTRAINT ct_fk_quiz_geral
+    FOREIGN KEY (fk_quiz_geral) REFERENCES quiz_geral(id),
+    
+   
+    dt_quiz_realizado DATE DEFAULT (CURRENT_DATE),
+    total_pontos INT
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
-);
+INSERT quiz_geral (nome_quiz)VALUES
+('Quiz de conhecimentos gerais');
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
 
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
+SELECT * FROM usuario;	
 
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+SELECT * FROM quiz_geral;
+
+SELECT * FROM usuario_quiz_geral;	
+	

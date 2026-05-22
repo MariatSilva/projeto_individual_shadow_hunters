@@ -74,9 +74,9 @@ body {
     list-style: none;
     justify-content: flex-end;
     align-items: center;
-    gap: 3vw;
+    gap: 20px;
     width: fit-content;
-    font-size: 1.3vw;
+    font-size: 16px;
     font-weight: lighter;
   
 }
@@ -111,4 +111,30 @@ body {
 .links-cadastro a:hover{
     background-color: #A5AF79;
     color: black;
+}
+
+.links_quiz{
+     width: fit-content;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.links_quiz a{
+     color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #A5AF79;
+}
+
+.btn-logout{
+    background-color: #A5AF79;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: bold;
 }

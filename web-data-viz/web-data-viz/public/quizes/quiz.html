@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/quiz_geral.css">
+       <script src="/js/sessao.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <script>
+        fetch("/includes/header.html")
+            .then(resposta => resposta.text())
+            .then(dados => {
+                document.getElementById("header").innerHTML = dados;
+
+                if(sessionStorage.ID_USUARIO){
+                    document.getElementById("links_cadastro").style.display ="none";
+                    document.getElementById("links_usuario").style.display = "flex"
+                }
+            });
+    </script>
+
+
+
+
+    <div class="container_geral">
+        <div class="div_titulos">
+            <p class="titulo_divs">Quiz de Conhecimentos Gerais</p>
+        </div>
+
+
+
+        <div class="container_perguntas_geral font_geral">
+
+            <!-- PERGUNTA 1 -->
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">1.Qual o nome dos três Instrumentos Mortais citados nos livros?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta1" value="opcao1">
+                        <label for="">Cálice Mortal, Espada Mortal e Espelho Mortal</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta1" value="opcao2">
+                        <label for="">Cálice de Fogo, Espada da Verdade e Espelho de Água</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta1" value="opcao3">
+                        <label for="">Adaga da Vida, Estela e Livro Gray</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta1" value="opcao4">
+                        <label for="">Anel da Verdade, Colar Vital e Pena da Condenação</label>
+                    </div>
+                
+                    <div id="div_resultado1"></div>
+            </div>
+
+            <!-- PERGUNTA 2 -->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">2.Quem é o protagonista da saga de Instrumentos Mortais?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta2" value="opcao1">
+                        <label for="">Jace Herondale</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta2" value="opcao2">
+                        <label for="">Simon Lewis</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta2" value="opcao3">
+                        <label for="">Clary Fairchaild</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta2" value="opcao4">
+                        <label for="">Valentim Morgenstern</label>
+                    </div>
+                
+                    <div id="div_resultado2"></div>
+            </div>
+
+              <!-- PERGUNTA 3 -->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">3.Qual nome do anjo que deu oriem aos Caçadores das Sombras?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta3" value="opcao1">
+                        <label for="">Ithuriel</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta3" value="opcao2">
+                        <label for="">Arcanjo Miguel</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta3" value="opcao3">
+                        <label for="">Uriel</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta3" value="opcao4">
+                        <label for="">Raziel</label>
+                    </div>
+                
+
+                    <div id="div_resultado3"></div>
+            </div>
+
+              <!-- PERGUNTA 4-->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">4.Qual nome do instrumento que Caçadores das Sombras usam para desenhar suas runas? </p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta4" value="opcao1">
+                        <label for="">Adamas</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta4" value="opcao2">
+                        <label for="">Caduceu de Hermes</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta4" value="opcao3">
+                        <label for="">Estela</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta4" value="opcao4">
+                        <label for="">Lira</label>
+                    </div>
+                
+                    <div id="div_resultado4"></div>
+            </div>
+
+              <!-- PERGUNTA 5-->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">5.Quem é foi o parabatai de Jem Carstais?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta5" value="opcao1">
+                        <label for="">Willian Herondale</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta5" value="opcao2">
+                        <label for="">Jace Herondale</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta5" value="opcao3">
+                        <label for="">Teresa Gray</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta5" value="opcao4">
+                        <label for="">Jessamine Lovelace</label>
+                    </div>
+                    
+                    <div id="div_resultado5"></div>
+            </div>
+
+              <!-- PERGUNTA 6-->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">6.Qual o nome da Rainha das fadas?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta6" value="opcao1">
+                        <label for="">Selena</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta6" value="opcao2">
+                        <label for="">Sellie</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta6" value="opcao3">
+                        <label for="">Sercey</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta6" value="opcao4">
+                        <label for="">Suna</label>
+                    </div>
+                
+                    <div id="div_resultado6"></div>
+            </div>
+
+              <!-- PERGUNTA 7-->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">7.Qual o nome do feiticeiro que possui olhos de gato?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta7" value="opcao1">
+                        <label for="">Ragnor Fell</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta7" value="opcao2">
+                        <label for="">Magnus Bane</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta7" value="opcao3">
+                        <label for="">Catarina Loss</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta7" value="opcao4">
+                        <label for="">Malcom Fade</label>
+                    </div>
+                
+                    <div id="div_resultado7"></div>
+            </div>
+            
+
+              <!-- PERGUNTA 8 -->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">8.Qual dos personagens abaixo NÃO é um lobisomem?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta8" value="opcao1">
+                        <label for="">Lucian Graymark</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta8" value="opcao2">
+                        <label for="">Maia Roberts</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta8" value="opcao3">
+                        <label for="">Anselm Nightshade</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta8" value="opcao4">
+                        <label for="">Jordan Kyle</label>
+                    </div>
+                
+
+                    <div id="div_resultado8"></div>
+            </div>
+            
+
+              <!-- PERGUNTA 9 -->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">9.Quem liderava o Hotel Dumort no início da saga de Instrumentos Mortais?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta9" value="opcao1">
+                        <label for="">Luke Garroway</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta9" value="opcao2">
+                        <label for="">Magnus Bane</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta9" value="opcao3">
+                        <label for="">Raphael Santiago</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta9" value="opcao4">
+                        <label for="">Camille Belcourt</label>
+                    </div>
+
+                    <div id="div_resultado9"></div>
+                
+            </div>
+
+              <!-- PERGUNTA 10 -->
+
+            <div class="container_unico_pergunta">
+                <p class="titulo_pergunta_quiz">10.A qual família pertence a espada Cortana?</p>
+                
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta10" value="opcao1">
+                        <label for="">Carstairs</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta10" value="opcao2">
+                        <label for="">Blackthorn</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta10" value="opcao3">
+                        <label for="">Lightwood</label>
+                    </div>
+                    <div class="opcao_unica">
+                        <input type="radio" name="pergunta10" value="opcao4">
+                        <label for="">Herondale</label>
+                    </div>
+                
+
+                    <div id="div_resultado10"></div>
+            </div>
+        </div>
+        <button id="finalizar" onclick="finalizar_quiz()">Finalizar</button>
+
+
+    </div>
+
+
+    
+
+
+</body>
+<script>
+    function finalizar_quiz(){
+        let q1 =  document.querySelector('input[name="pergunta1"]:checked');
+        let q2 =  document.querySelector('input[name="pergunta2"]:checked');
+        let q3 =  document.querySelector('input[name="pergunta3"]:checked');
+        let q4 =  document.querySelector('input[name="pergunta4"]:checked');
+        let q5 =  document.querySelector('input[name="pergunta5"]:checked');
+        let q6 =  document.querySelector('input[name="pergunta6"]:checked');
+        let q7 =  document.querySelector('input[name="pergunta7"]:checked');
+        let q8 =  document.querySelector('input[name="pergunta8"]:checked');
+        let q9 =  document.querySelector('input[name="pergunta9"]:checked');
+        let q10 =  document.querySelector('input[name="pergunta10"]:checked');
+
+
+        let respostas_corretas = 0;
+
+        if(q1.value == "opcao1"){
+            respostas_corretas++;
+
+            div_resultado1.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado1.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+            if(q2.value == "opcao3"){
+            respostas_corretas++;
+
+             div_resultado2.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado2.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q3.value == "opcao4"){
+            respostas_corretas++;
+
+            div_resultado3.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado3.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q4.value == "opcao3"){
+            respostas_corretas++;
+
+            div_resultado4.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado4.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+                if(q5.value == "opcao1"){
+            respostas_corretas++;
+
+            div_resultado5.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado5.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q6.value == "opcao2"){
+            respostas_corretas++;
+
+           div_resultado6.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado6.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q7.value == "opcao2"){
+            respostas_corretas++;
+
+             div_resultado7.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado7.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q8.value == "opcao3"){
+            respostas_corretas++;
+
+           div_resultado8.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado8.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q9.value == "opcao4"){
+            respostas_corretas++;
+
+            div_resultado9.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado9.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+                if(q10.value == "opcao1"){
+            respostas_corretas++;
+
+             div_resultado10.innerHTML = "<span style='color: rgb(11, 216, 11);'>Resposta correta!</span>"
+        }else{
+            div_resultado10.innerHTML = "<span style='color:red;'>Resposta incorreta!</span>"
+
+        }
+
+
+        console.log('Quantidade de resposta corretas:', respostas_corretas)
+        
+        // ENVIANDO PARA O BANCO
+        let id_quiz = 1;
+        let id_usuario = sessionStorage.ID_USUARIO;
+
+        fetch("/quiz_geral/salvarResultado", {
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idQuizServer: id_quiz,
+                idUsuarioServer: id_usuario,
+                respCorretasServer: respostas_corretas
+            })
+        })
+        .then(function(resposta){
+            if(resposta.ok){
+                console.log("Resultado salvo!!")
+            }
+        })
+
+         
+    }
+</script>
+
+</html>

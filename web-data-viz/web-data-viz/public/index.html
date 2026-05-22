@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="icon" href="./assets/img/logo.png" />
+    
+       <script src="/js/sessao.js"></script>
+    <style>
+        .link_atual_index{
+            color: aqua;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +25,12 @@
         fetch("/includes/header.html")
             .then(resposta => resposta.text())
             .then(dados => {
-                document.getElementById("header").innerHTML = dados
+                document.getElementById("header").innerHTML = dados;
+
+                if(sessionStorage.ID_USUARIO){
+                    document.getElementById("links_cadastro").style.display ="none";
+                    document.getElementById("links_usuario").style.display = "flex"
+                }
             });
     </script>
 
