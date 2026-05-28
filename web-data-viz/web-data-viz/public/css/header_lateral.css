@@ -21,9 +21,9 @@
     align-items: center;
     width: 250px;
     height: 100vh;
-    background-color:#06050F;
+    background-color:#02021e;
     color: white;
-    border-right: 2px solid white;
+   box-shadow: 0px 1px 2px rgb(255, 255, 255, 0.3);
     padding: 50px 0px;
 }
 
@@ -33,53 +33,63 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20%;
-    gap: 20px;
+    height: 20vh;
+    
 }
 
 .img_logo{
       font: 'Batang', serif;
    
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .titulo_logo{
      font: 'Batang', serif;
-     color: #E3D045;
+     color: #d1d1cc;
      font-size: 25px;
+     padding: 5px 0px;
 }
-
+.sub_titulo_logo{
+     color: #E3D045;
+     font-size: 18px;
+     letter-spacing: 1px;
+}
 .btn_acesso_geral{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 70%;
+    height: 70vh;
     gap: 30px;
+    padding: 20px 0px 0px 0px;
 }
 
 .btn_acesso_atual{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 150px;
-    height: 40px;
-
-    color: #4475DE;
-    border: 2px solid #4475DE;
-    border-radius: 3px;
+    width: 90%;
+    height: 50px;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #cbcfd7;
+    background-color: #a9892b;
+    border-radius: 8px;
 }
 
-
+.btn_acesso_atual img{
+    width: 30px;
+    height: 30px;
+}
 
 .btn_acesso{
      display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background-color: #4475DE;
     color: #000;
     border-radius: 3px;
@@ -88,7 +98,7 @@
 
 .btn_acesso_atual a{
     text-decoration: none;
-    color: #4475DE;
+    color: #cbd0db;
     font-weight: bold;
     
 }
@@ -100,13 +110,20 @@
 
 
 .btn-logout{
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #C33434;
-    border-radius: 3px;
-    width: 60px;
-    height: 40px;
-    color: #000;
+    justify-content: flex-start;
+    border: 0.7px solid #606060;
+    border-radius: 12px;
+    gap: 10px;
+    color: #f0f0f0;
     font-weight: bold;
+    width: 90%;;
+    padding: 15px 20px;
+}
+
+.btn-logout img{
+    width: 25px;
+    height: 25px;
 }

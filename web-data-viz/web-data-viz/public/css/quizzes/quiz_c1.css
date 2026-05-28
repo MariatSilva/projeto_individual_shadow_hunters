@@ -22,11 +22,12 @@
     flex-direction: column;
     align-items: center;
     padding-top: 12vh;
-    background-color: #121212;
+    background-color: #e4e6e5;
 }
 
 .div_titulos {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -39,23 +40,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d2d2d2;
-    border: 2px solid #999939;
-    border-radius: 20px;
-    background-color: #121212;
-    padding: 0px 30px;
-    height: 50px;
-    font-size: 28px;
-     transition: background-color 0.4s ease;
+    color: #1B1C3F;
+    font-size: 36px;
+    font-weight: bold;
+    
 }
 
+.titulo_desc{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1B1C3F;
+    font-size: 18px;
+    border-bottom: 1px solid #999939;
+    padding-bottom: 2px;
+}
+/* 
 .titulo_divs:hover{
     background-color: #999939;
     color: #121212;
         
          
 
-}
+} */
 
 
 .container_perguntas_geral{
@@ -73,28 +80,33 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 200px;
-    background-color: rgb(38, 38, 42, 0.75);
+    height: fit-content;
+    background-color: rgb(38, 38, 42, 0.1);
     border-radius: 12px;
     padding: 20px;
-    color: white;
+    color: #1B1C3F;
+    font-size: 18px;
+    gap: 10px;
 }
 
 .titulo_pergunta_quiz{
-    color: white;
-    font-size: 20px;
+    color: #1B1C3F;
+   
+    font-size: 22px;
     padding-bottom: 20px;
+    font-weight: bold;
+
 }
 
 
 #finalizar{
-    padding: 4px 16px;
+    padding: 4px 20px;
     font-weight: bold;
     font-size: 18px;
-    background-color: #999939;
-    border: 2px solid #313116;
+    background-color: #8496e8;
+    border: 2px solid rgb(192, 192, 224);
     border-radius: 12px;
-    color: #1b1602;
+    color: #0b031c;
     margin: 20px 0px;
 }
 
@@ -102,3 +114,25 @@
 #div_resultado6, #div_resultado7, #div_resultado8, #div_resultado9, #div_resultado10{
     padding-top: 16px;
 }
+
+.opcao_unica{
+    border: 1px solid rgba(51, 61, 8, 0.4);
+    padding: 10px 5px;
+    border-radius: 12px;
+    
+}
+
+.opcao_unica input[type="radio"] {
+  accent-color: #717125; 
+}
+.letra_opcao{
+    color:  #717125;
+    font-size: 18px;
+    padding:0px 10px 0px 5px;
+    font: 'Batang', Serif;
+}
+
+.font_batang{
+     font: 'Batang', Serif;
+}
+

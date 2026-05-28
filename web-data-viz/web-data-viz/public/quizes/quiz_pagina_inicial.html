@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/quizzes/quiz_pagina_inicial.css">
+    <link rel="icon" href="./assets/img/logo.png" />
+
+    <script src="/js/sessao.js"></script>
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <script>
+        fetch("/includes/header.html")
+            .then(resposta => resposta.text())
+            .then(dados => {
+                document.getElementById("header").innerHTML = dados;
+
+                if (sessionStorage.ID_USUARIO) {
+                    document.getElementById("links_cadastro").style.display = "none";
+                    document.getElementById("links_usuario").style.display = "flex";
+                    document.getElementById("link_quiz").style.display = "flex";
+                    document.getElementById("barra_header").style.display = "flex";
+                }
+            });
+    </script>
+
+    <div class="container_geral">
+
+
+
+
+
+        <div class="titulo_tela_quizzes">
+            <p>Quizzes do universo literário de Shadowhunters</p>
+            <h5 class="font_geral">Teste seus conhecimentos sobre os livros, personagens e histórias que fazem parte do
+                mundo das sombras</h5>
+        </div>
+
+
+        <div class="titulo_escolha">
+            <img src="/assets/icon/icon_livro.png" alt="">
+            <p>Jogue um quiz</p>
+            <hr>
+        </div>
+
+        <div class="linha_cards_acesso_quiz font_geral">
+            <div class="card_acesso_quiz">
+                <a href="/quizes/quiz_c1.html">
+                    <img src="/assets/img/card_quiz1_geral.jpg" alt="">
+                    <div class="desc_card">
+                        <p class="tipo_quiz">Quiz</p>
+                        <p class="text_quiz">O quanto você sabe sobre o universo de Shadowhunters?</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card_acesso_quiz">
+                <a href="/quizes/quiz_p1.html">
+                    <img src="/assets/img/card_quiz2.jpg" alt="">
+                    <div class="desc_card">
+                        <p class="tipo_quiz">Quiz de personalidade</p>
+                        <p class="text_quiz">Há qual raça você pertenceria?</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+     
+
+
+
+    </div>
+   <div id="footer"></div>
+
+        <script>
+            fetch("/includes/footer.html")
+                .then(resposta => resposta.text())
+                .then(dados => {
+                    document.getElementById("footer").innerHTML = dados
+                });
+        </script>
+
+</body>

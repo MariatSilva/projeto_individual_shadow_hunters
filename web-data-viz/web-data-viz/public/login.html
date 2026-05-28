@@ -46,9 +46,9 @@
                 <input type="password" id="senha_input">
 
             </div>
-            <a href="">Esqueci minha senha</a>
+            
             <button onclick="entrar()">Entrar</button>
-        
+            <a href="/cadastro.html">Criar uma conta</a>
                 <div class="card_erro" id="cardErro">
                     <span id="mensagem_erro"></span>
                 </div>
@@ -113,7 +113,7 @@
                         if(json.id == 1){
                             window.location = "./dashboard/dash_quiz_geral.html";  
                         }else{
-                             window.location = "./quizes/quiz.html";
+                             window.location = "./quizes/quiz_pagina_inicial.html";
                         }
                        
                     }, 2000); // apenas para exibir o loading

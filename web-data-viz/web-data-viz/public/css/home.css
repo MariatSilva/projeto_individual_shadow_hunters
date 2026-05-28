@@ -170,25 +170,18 @@ padding-top: 30px;
 .cards_geral {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+     gap: 90px;
     justify-content: center;
+    padding: 30px 20px;
    
   
 
 }
-
-.linha_card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px;
-  
-    
-    
-}
+ 
 .card {
     width: 240px;
-    height: 370px;
+    height: 380px;
     perspective: 1000px;
   
 }
@@ -230,9 +223,9 @@ padding-top: 30px;
     transform: rotateY(180deg); 
     display: flex;
     flex-direction: column;
-    background-color: rgba(236, 232, 232, 0.9);
+    background-color: rgba(236, 232, 232);
      box-shadow: 4px 4px 6px rgba(0,0,0, 0.4);
-           padding: 10px 10px;
+           padding: 6px 6px;
 
 }
 
@@ -336,16 +329,35 @@ padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     border: 2px solid;
     border-color: #A5AF79;
     border-radius: 10px;
     background-color: rgb(0, 0, 0, 0.2);
     width: 130px;
     padding: 5px 0px;
-    
-
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 17px;
 }
+#btn_chamativo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+#btn_chamativo:hover{
+    background-color: #A5AF79;
+    border-color:  #697240;
+   
+}
+#btn_chamativo:hover a{
+    color: #0e1043;
+}
+
 .imagens_chamativo{
     display: flex;
     width: fit-content;
@@ -410,19 +422,20 @@ padding-top: 30px;
 }
 
 .lista{
+
     
     display: flex;
    flex-direction: column;
    flex-wrap: wrap;
    width: fit-content;
-    padding-left: 25px; /* espaço para a bolinha */
+    padding-left: 11px; 
     list-style-position: outside;
    
 }
 
 .lista li{
       list-style-type: "★";
-      color: #031231;
+      color: #020a1b;
       font-size: 18px;
       margin-bottom: 5px;
       

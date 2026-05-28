@@ -41,6 +41,7 @@ body {
     font-size: 1.4vw;
     color: white;
     width: fit-content;
+    font-weight: bold;
 
 
 }
@@ -56,7 +57,7 @@ body {
     list-style: none;
     justify-content: center;
     align-items: center;
-    width: 35vw;
+   
     gap: 5vw;
     font-size: 1.3vw;
     font-weight: lighter;
@@ -133,8 +134,9 @@ body {
 }
 
 .btn-logout{
-    background-color: #A5AF79;
-    padding: 4px 10px;
+    background-color: #637ace;
+    padding: 4px 18px;
     border-radius: 8px;
     font-weight: bold;
+    color: #F4F4F4;
 }

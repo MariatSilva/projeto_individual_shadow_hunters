@@ -106,7 +106,8 @@ input:focus{
     border-style: none;
     font-weight: bold;
     font-size: 14px;
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .formulario a{
@@ -115,7 +116,7 @@ input:focus{
 }
 
 .formulario a:hover{
-     color: rgb(218, 214, 140);
+     color: rgb(219, 217, 186);
     transition: all 0.3s ease;
 }
 

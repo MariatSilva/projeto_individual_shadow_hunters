@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Batang';
+    src: url('./fonts/Batang.woff2') format('woff2'),
+        url('./fonts/Batang.woff') format('woff');
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.font_geral {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container_geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+    background-color: #e4e6e5;
+}
+
+.div_titulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0px;
+    
+}
+
+
+.titulo_divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1B1C3F;
+    font-size: 36px;
+    font-weight: bold;
+    
+}
+
+.titulo_desc{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1B1C3F;
+    font-size: 18px;
+    border-bottom: 1px solid #999939;
+    padding-bottom: 2px;
+}
+/* 
+.titulo_divs:hover{
+    background-color: #999939;
+    color: #121212;
+        
+         
+
+} */
+
+
+.container_perguntas_geral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 30px;
+    margin: 30px 0px;
+    
+}
+
+.container_unico_pergunta{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(38, 38, 42, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    color: #1B1C3F;
+    font-size: 18px;
+    gap: 10px;
+}
+
+.titulo_pergunta_quiz{
+    color: #1B1C3F;
+   
+    font-size: 22px;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+
+#finalizar{
+    padding: 4px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #8496e8;
+    border: 2px solid rgb(192, 192, 224);
+    border-radius: 12px;
+    color: #0b031c;
+    margin: 20px 0px;
+}
+
+#div_resultado1, #div_resultado2, #div_resultado3, #div_resultado4, #div_resultado5,
+#div_resultado6, #div_resultado7, #div_resultado8, #div_resultado9, #div_resultado10{
+    padding-top: 16px;
+}
+
+.opcao_unica{
+    border: 1px solid rgba(51, 61, 8, 0.4);
+    padding: 10px 5px;
+    border-radius: 12px;
+    
+}
+
+.opcao_unica input[type="radio"] {
+  accent-color: #717125; 
+}
+.letra_opcao{
+    color:  #717125;
+    font-size: 18px;
+    padding:0px 10px 0px 5px;
+    font: 'Batang', Serif;
+}
+
+.font_batang{
+     font: 'Batang', Serif;
+}
+

@@ -26,20 +26,21 @@
             <div class="logo">
                 <img class="img_logo" src="/assets/img/logo.png" alt="">
                 <p class="titulo_logo">MoonShadow</p>
+                <p class="sub_titulo_logo">Dashboard</p>
             </div>
 
             <div class="btn_acesso_geral font_geral">
                 <div class="btn_acesso_atual">
-                    <a href="dash_quiz.html">Quiz-Geral</a>
+                    <img src="/assets/icon/livro_icon.png" alt="">
+                    <a href="dash_quiz.html">Quizzs</a>
                 </div>
-                <div class="btn_acesso">
-                    <a href="dash_quiz.html">Quiz-Personalidade</a>
-                </div>
+                
 
             </div>
 
 
             <div class="btn-logout" onclick="limparSessao()">
+                <img src="/assets/icon/sair_icon.png" alt="">
                 <h3>Sair</h3>
             </div>
 
@@ -51,26 +52,26 @@
             <div class="indicadores_gerais">
 
                 <div class="indicador_unico">
-                    <div class="titulo_indicador">Quantidade de usuarios que fizeram o quiz</div>
+                    <div class="titulo_indicador">Quantidade de respostas do quiz</div>
                     <hr>
-                    <div class="valor_indicador">213</div>
+                    <div class="valor_indicador" id="qtd_resp"></div>
                 </div>
 
                 <div class="indicador_unico">
                     <div class="titulo_indicador">Média dos pontos de todas as resposta </div>
                     <hr>
-                    <div class="valor_indicador">7.7</div>
+                    <div class="valor_indicador" id="qtd_media"></div>
                 </div>
 
                 <div class="indicador_unico">
-                    <div class="titulo_indicador">Respostas ABAIXO de 5 pontos</div>
+                    <div class="titulo_indicador">Respostas ATÉ de 5 pontos</div>
                     <hr>
-                    <div class="valor_indicador">35</div>
+                    <div class="valor_indicador" id="qtd_ate_cinco_pontos"></div>
                 </div>
                 <div class="indicador_unico">
                     <div class="titulo_indicador">Respostas ACIMA de 5 pontos</div>
                     <hr>
-                    <div class="valor_indicador">178</div>
+                    <div class="valor_indicador" id="qtd_acima_cinco_pontos"></div>
                 </div>
             </div>
 
@@ -94,39 +95,183 @@
 
 
 <script>
-    const ctx = document.getElementById('grafico_qtd_resp_quiz');
 
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['0 pts', '1 pts', '2 pts', '3 pts', '4 pts', '5 pts', '6 pts', '7 pts', '8 pts', '9 pts', '10 pts'],
-            datasets: [{
-                label: 'respostas',
-                data: [12, 19, 3, 5, 2, 3, 20, 16, 15, 17, 1],
-                borderWidth: 1,
-                backgroundColor: '#E5CE4E',
+    let quiz_qtd_respostas = document.getElementById('qtd_resp');
+    let quiz_media_pontos = document.getElementById('qtd_media');
+    let quiz_ate_cinco_pontos = document.getElementById('qtd_ate_cinco_pontos');
+    let quiz_acima_cinco_pontos = document.getElementById('qtd_acima_cinco_pontos');
+    let quiz_grafico1 = document.getElementById('grafico_qtd_resp_quiz')
 
-            }]
-        },
-        options: {
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#E5CE4E' 
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: { color: 'white' }
-                },
-                x:{
-                    ticks: { color: 'white' }
-                }
+
+    fetch("/dashboard/qtdRespostas")
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (respostas) {
+                    respostas.forEach((resposta) => {
+                        quiz_qtd_respostas.innerHTML = resposta.qtd_respostas
+                    })
+                })
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                respostas.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
             }
-        }
-    });
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+    fetch("/dashboard/MediaRespostas")
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (respostas) {
+                    respostas.forEach((resposta) => {
+                        quiz_media_pontos.innerHTML = resposta.media_pontos_totais
+                    })
+                })
+            } else {
+
+                console.log("Houve um erro ao tentar recuperar dados");
+
+                respostas.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+    fetch("/dashboard/qtdRespostasAteCinco")
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (respostas) {
+                    respostas.forEach((resposta) => {
+                        quiz_ate_cinco_pontos.innerHTML = resposta.total_resp_ate_cinco
+                    })
+                })
+            } else {
+
+                console.log("Houve um erro ao tentar recuperar dados");
+
+                respostas.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+    fetch("/dashboard/qtdRespostasAcimaCinco")
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (respostas) {
+                    respostas.forEach((resposta) => {
+                        quiz_acima_cinco_pontos.innerHTML = resposta.total_resp_acima_cinco
+                    })
+                })
+            } else {
+
+                console.log("Houve um erro ao tentar recuperar dados");
+
+                respostas.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+
+
+
+
+
+
+
+
+
+    fetch("/dashboard/quiz_grafico1")
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (respostas) {
+                    let labels = []
+                    let dados = []
+
+                    respostas.forEach((resposta) => {
+
+
+                        labels.push(resposta.total_pontos + " pts");
+                        dados.push(resposta.qtd_respostas);
+   })
+
+                        const ctx = document.getElementById('grafico_qtd_resp_quiz');
+
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: 'respostas',
+                                    data: dados,
+                                    borderWidth: 1,
+                                    backgroundColor: '#E5CE4E',
+
+                                }]
+                            },
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#E5CE4E'
+                                        }
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        
+                                        beginAtZero: true,
+                                        suggestedMax:10,
+                                        ticks: { color: 'white',
+                                        precision:0
+                                 }
+                                    },
+                                    x: {
+                                        ticks: { color: 'white' }
+                                    }
+                                }
+                            }
+                        });
+                 
+                })
+            } else {
+
+                console.log("Houve um erro ao tentar recuperar dados do grafico");
+
+                respostas.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+
+
+
+
+
 </script>
 
 </html>

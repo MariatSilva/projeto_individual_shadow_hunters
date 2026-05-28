@@ -45,7 +45,7 @@
       </div>
       <button onclick="cadastrar()">Cadastrar</button>
       <a href="login.html">Já tenho uma conta</a>
-      
+
       <div class="card_erro" id="cardErro">
         <span id="mensagem_erro"></span>
       </div>
@@ -61,11 +61,6 @@
   </div>
 </body>
 
-<script>
-
-</script>
-
-</html>
 
 
 
@@ -73,16 +68,27 @@
 
 
 
+  function mostrarErro(msg) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = msg;
+
+    finalizarAguardar();
+    setTimeout(sumirMensagem, 5000);
+    return false;
+  }
   function cadastrar() {
 
     aguardar()
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
+    var nomeVar = nome_input.value.trim();
+    var emailVar = email_input.value.trim();
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    console.log(senhaVar)
+
 
 
     // Verificando se há algum campo em branco
@@ -92,18 +98,53 @@
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      return mostrarErro("Preencha todos os campos")
 
-      finalizarAguardar();
-      return false;
-      ;
 
-    } else {
-      setInterval(sumirMensagem, 5000);
+    } 
+
+
+
+    // VERIFICAÇÃO DE EMAIL
+    let pos_arroba = emailVar.indexOf("@");
+    let pos_com = emailVar.indexOf(".com");
+
+    if (pos_arroba == -1 || pos_com == -1 || pos_arroba > pos_com) {
+      return mostrarErro("Preencha um email válido")
     }
 
+
+    //VERIFICAÇÃO DE SENHA
+    if (senhaVar != confirmacaoSenhaVar) {
+      return mostrarErro("Preencha senhas iguais")
+    }
+
+
+    if (senhaVar.length < 8 || confirmacaoSenhaVar.length < 8) {
+      return mostrarErro("Digite uma senha com no mínimo 8 caracteres")
+    }
+
+
+    if (senhaVar.trim() == "" || confirmacaoSenhaVar.trim() == "") {
+      return mostrarErro("Digite uma senha válida")
+    }
+
+
+
+    let senha_com_letra_maiscula = false;
+    for (let i = 0; i < senhaVar.length; i++) {
+
+      if (senhaVar[i] === senhaVar[i].toUpperCase() &&
+        senhaVar[i] != senhaVar[i].toLowerCase()) {
+        senha_com_letra_maiscula = true;
+        break;
+
+      }
+    }
+
+    if (!senha_com_letra_maiscula) {
+      return mostrarErro("Digite uma senha com no mínimo uma letra maiúscula")
+    }
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
@@ -152,3 +193,6 @@
     cardErro.style.display = "none";
   }
 </script>
+
+</html>
+
