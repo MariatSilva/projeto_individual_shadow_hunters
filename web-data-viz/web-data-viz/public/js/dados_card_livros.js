@@ -161,3 +161,39 @@ let card_livros = [
 ]
 
 
+let card_seres = [
+    {
+        "img": "./assets/img/codex_irmaos_silencio.jpg",
+        "nome_ser":"Irmãos do Silêncio",
+        "desc":"Os Irmãos do Silêncio são um grupo seleto e enigmático de Caçadores das Sombras(Nephilim) masculinos que vivem em isolamento na Cidade Silenciosa. Eles atuam como guardiões, médicos, arquivistas e sábios, dedicando suas vidas à preservação do conhecimento nephilim. Apesar de viverem de forma reservada, ainda podem ser vistos com mais frequência do que as Irmãs de Ferro."
+    },
+     {
+        "img": "./assets/img/irmas_ferro.jpg",
+        "nome_ser":"Irmãs de Ferro",
+        "desc":"As Irmãs de Ferro são Caçadoras das Sombras (Nephilim) femininas que abandonam suas antigas vidas para viver em isolamento na Cidade Adamant. Elas dedicam suas existências à forja do adamas, o raro metal celestial utilizado na criação das armas, lâminas serafim e instrumentos dos Nephilim."
+    }, {
+        "img": "./assets/img/codex_renegados.jpg",
+        "nome_ser":"Renegados",
+        "desc":"Renegados são mundanos que receberam marcas angelicais (runas) dos Caçadores das Sombras. Como seus corpos não suportam o poder das runas, muitos acabam morrendo ou enlouquecendo. Aqueles que sobrevivem tornam-se seres descontrolados e violentos, perdendo a noção do certo e do errado, além de poderem ser manipulados por quem os transformou."
+    },
+     {
+        "img": "./assets/img/codex_Raziel.jpg",
+        "nome_ser":"Anjos",
+        "desc":"Anjos são seres celestiais extremamente poderosos e raros, que descem à Terra apenas em momentos críticos. Foi o anjo Raziel quem concedeu seu sangue a Jonathan Caçador das Sombras, criando assim os primeiros Nephilim. Os anjos representam a ordem celestial e possuem poderes capazes de enfrentar até mesmo as maiores forças demoníacas."
+    }, 
+     {
+        "img": "./assets/img/codex_samael.jpg",
+        "nome_ser":"Príncipes do Inferno",
+        "desc":"Príncipes do Inferno são os demônios mais poderosos existentes, governando diferentes domínios infernais e estando acima de todas as outras criaturas demoníacas. São entidades antigas, inteligentes e extremamente perigosas, capazes de manipular humanos e influenciar acontecimentos no mundo mortal."
+    },
+     {
+        "img": "./assets/img/codex_Abbadon.jpg",
+        "nome_ser":"Demônios Maiores",
+        "desc":"Demônios Maiores são criaturas demoníacas de alta hierarquia, servindo muitas vezes aos Príncipes do Inferno. Possuem grande poder destrutivo, habilidades sobrenaturais avançadas e inteligência elevada, tornando-se ameaças muito mais perigosas do que demônios comuns."
+    },
+     {
+        "img": "./assets/img/codex_Raum.jpg",
+        "nome_ser":"Demônios Comuns",
+        "desc":"Demônios Comuns são criaturas infernais inferiores, frequentemente invocadas ou atraídas para o mundo mortal. Apesar de variarem em aparência e habilidades, geralmente possuem menos inteligência e poder, atacando humanos e Nephilim de forma mais instintiva e violenta."
+    }
+]

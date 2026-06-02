@@ -2,7 +2,7 @@
 function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
-
+    var id = sessionStorage.ID_USUARIO;
     var b_usuario = document.getElementById("b_usuario");
 
     if (email != null && nome != null) {
@@ -11,6 +11,32 @@ function validarSessao() {
         window.location = "../login.html";
     }
 }
+
+function validarSessaoAdmin() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+    var id = sessionStorage.ID_USUARIO;
+
+  if (!sessionStorage.EMAIL_USUARIO) {
+    window.location = "/quizes/quiz_sem_login.html";
+} else if (sessionStorage.ID_USUARIO == 1) {
+    window.location = "/dashboard/dash_quiz_geral.html";
+} 
+    
+}
+
+function validarAcessoDashboard() {
+
+    if (!sessionStorage.EMAIL_USUARIO) {
+        window.location = "/quizes/quiz_sem_login.html";
+    }
+
+    else if (sessionStorage.ID_USUARIO != 1) {
+        window.location = "/quizes/quiz_pagina_inicial.html";
+    }
+
+}
+
 
 function limparSessao() {
     sessionStorage.clear();

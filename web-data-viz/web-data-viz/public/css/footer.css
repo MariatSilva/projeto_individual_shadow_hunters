@@ -79,7 +79,20 @@
     list-style: none;
     font-size: 17px;
 }
+.lista_footer a {
+    color: white;
+    text-decoration: none;
+}
 
+.lista_footer li:hover{
+    color: #c0b459;
+    text-decoration: none;
+}
+
+.lista_footer a:hover{
+    color: #c0b459;
+    text-decoration: none;
+}
 .navegacao, .paginas, .contato{
     display: flex;
     flex-direction: column;

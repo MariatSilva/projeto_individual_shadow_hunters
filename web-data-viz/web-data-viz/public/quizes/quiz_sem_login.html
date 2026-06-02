@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | sem login</title>
+    <link rel="stylesheet" href="/css/quizzes/quiz_sem_login.css">
+</head>
+
+<body>
+
+     <div id="header"></div>
+
+    <script>
+        fetch("/includes/header.html")
+            .then(resposta => resposta.text())
+            .then(dados => {
+                document.getElementById("header").innerHTML = dados;
+
+                if(sessionStorage.ID_USUARIO){
+                    document.getElementById("links_cadastro").style.display ="none";
+                    document.getElementById("links_usuario").style.display = "flex"
+                }
+            });
+    </script>
+    <div class="container_geral">
+
+        <div class="card">
+            <p><span >“</span>Faça o seu login ou cadastre-se antes de fazer o quiz, que tal? Faça isso para ter acesso a esse grande
+                mundo de magia e também para você não ter problemas com a clave e blablabla <span>”</span></p>
+            <hr>
+            <span>-Magnus Bane</span>
+            <div class="botoes">
+                <button class="btn_login"><a href="/login.html">LOGIN</a></button>
+                <button class="btn_cadastro"><a href="/cadastro.html">CADASTRO</a></button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

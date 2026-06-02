@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>quiz</title>
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/quizzes/quiz_pagina_inicial.css">
     <link rel="icon" href="./assets/img/logo.png" />
@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onload="validarSessaoAdmin()">
 
     <div id="header"></div>
 
@@ -26,8 +26,6 @@
                 if (sessionStorage.ID_USUARIO) {
                     document.getElementById("links_cadastro").style.display = "none";
                     document.getElementById("links_usuario").style.display = "flex";
-                    document.getElementById("link_quiz").style.display = "flex";
-                    document.getElementById("barra_header").style.display = "flex";
                 }
             });
     </script>
@@ -61,7 +59,7 @@
                     </div>
                 </a>
             </div>
-            <div class="card_acesso_quiz">
+            <!-- <div class="card_acesso_quiz">
                 <a href="/quizes/quiz_p1.html">
                     <img src="/assets/img/card_quiz2.jpg" alt="">
                     <div class="desc_card">
@@ -69,7 +67,7 @@
                         <p class="text_quiz">Há qual raça você pertenceria?</p>
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
 
 

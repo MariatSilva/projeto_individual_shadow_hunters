@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container_geral{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('/assets/img/fundo_magnus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    height: 100vh;
+    width: 100vw;
+    padding-right: 90px;
+   
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: fit-content;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 3px double #99873D;
+    border-radius: 12px;
+    color: white;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+
+.card hr{
+    width: 90%;
+    border: 1px solid #99873D;
+    
+    margin: 30px 0px;
+}
+
+.card span{
+    color: #99873D;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.aspas{
+    color: #99873D;
+    font-size: 1px;
+}
+
+.botoes{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.btn_login{
+    background-color: #7c7019;
+    border: 1px solid #b5aa53;
+   
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn_login a, .btn_cadastro a {
+     color: white;
+     text-decoration: none;
+}
+
+.btn_cadastro{
+    background-color: #120537;
+    border: 1px solid #b5aa53;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
